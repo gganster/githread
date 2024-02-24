@@ -24,10 +24,10 @@ export const Post = ({post} : PostProps) => {
         </Button>
       </div>
       <div className="flex items-center gap-1">
-        <Link className="text-muted-foreground text-sm" href={`/posts/${post.id}`} className="text-sm text-muted-foreground">
+        <Link className="text-muted-foreground text-sm" href={`/posts/${post.id}`}>
           {post._count.likes} likes
         </Link>
-        <Link className="text-muted-foreground text-sm" href={`/posts/${post.id}`} className="text-sm text-muted-foreground">
+        <Link className="text-muted-foreground text-sm" href={`/posts/${post.id}`}>
           {post._count.replies} replies
         </Link>
       </div>

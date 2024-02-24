@@ -8,7 +8,7 @@ import { MoreHorizontal } from "lucide-react";
 type PostLayoutProps = PropsWithChildren<{
   user: PostHome["user"],
   createdAt?: Date,
-  postId: string,
+  postId?: string,
   className?: string,
 }>;
 
