@@ -60,3 +60,13 @@ export const getPostView = async (id: string, userId?: string) => {
   });
 }
 export type PostView = Prisma.PromiseReturnType<typeof getPostView>;
+
+export const getPost = async (id: string, userId?: string) => {
+  return prisma.post.findUnique({
+    where: {id},
+    select: {
+      ...postSelectQuery(userId),
+    }
+  })
+}
+export type Post = Prisma.PromiseReturnType<typeof getPost>;
